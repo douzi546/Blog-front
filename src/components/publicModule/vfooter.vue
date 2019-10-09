@@ -4,7 +4,6 @@
       <dt>豆子的个人小站</dt>
       <dt>©All rights reserved</dt>
       <dt>Powered by yemaobumei</dt>
-      <dt>访问量:13690</dt>
       <dd>
         <a href="#" class="weibo icon"></a>
         <a href="#" class="none icon"></a>
@@ -27,7 +26,7 @@ export default {
   text-align: center;
   color: rgb(32, 13, 13);
   font-size: 16px;
-  margin-top: 10%;
+  margin-top: 5%;
   dt {
     margin: 10px 0;
   }

@@ -1,5 +1,7 @@
+const webpack = require('webpack')
 module.exports = {
-  baseUrl: '/',
+  publicPath: './',
+  // baseUrl: './',
   outputDir: 'dist', // 打包的目录
   lintOnSave: true, // 在保存时校验格式
   productionSourceMap: false, // 生产环境是否生成 SourceMap
@@ -12,4 +14,13 @@ module.exports = {
     proxy: null, // 设置代理
     before: app => { }
   },
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery"
+      })
+    ]
+  }
 }

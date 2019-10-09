@@ -1,13 +1,15 @@
 <template>
   <div class="container">
     <div class="slide">
+      <!-- html结构 -->
       <el-carousel indicator-position="outside" :height="height + 'px'">
         <el-carousel-item v-for="(item,index) in BannerImg" :key="index">
           <img :src="item.src">
         </el-carousel-item>
       </el-carousel>
     </div>
-    <div class="content">
+    <div class="index-content">
+      <!-- html结构 -->
       <transition name="fade">
         <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
           <swiper-slide class="swiper-slide1">
@@ -15,7 +17,7 @@
               <div class="banner">
                 <div class="title">
                   <div class="hr"></div>
-                  <h1 class="blogName">存在的时间</h1>
+                  <h1 class="blogName">小站</h1>
                   <div class="hr"></div>
                   <p>永远努力在你的生活之上保留一片天空</p>
                 </div>
@@ -34,10 +36,9 @@
                   <div class="trait">
                     <div class="title">博客特点</div>
                     <ul>
-                      <li>- 用户：用户的注册和登录，发表博文和评论。</li>
-                      <li>- 博文：用户可以在网站中发表和设置博文。</li>
-                      <li>- 评论：用户可以评论博文和回复其他用户的评论。</li>
-                      <li>- 分类：添加和删除分类，给文章设置分类。</li>
+                      <li>- 用户：用户可以注册和登录，发表文章和评论。</li>
+                      <li>- 评论：用户登录后可以对文章进行修改和删除。</li>
+                      <li>- 分类：文章可以进行分类和归档。</li>
                       <li>- 标签：添加和删除标签，给文章设置标签。</li>
                     </ul>
                   </div>
@@ -47,9 +48,10 @@
                     <div>
                       <div class="title">小练习</div>
                       <ul>
-                        <li>- 用户：用户的注册和登录，发表博文和评论。</li>
-                        <li>- 博文：用户可以在网站中发表和设置博文。</li>
-                        <li>- 评论：用户可以评论博文和回复其他用户的评论。</li>
+                        <li>- html+css+js仿写移动端京东首页</li>
+                        <li>- html+css仿写马蜂窝首页</li>
+                        <li>- 原生js呼吸轮播图</li>
+                        <li>- jq+ajax调用图灵机器人接口</li>
                       </ul>
                     </div>
                   </div>
@@ -64,27 +66,24 @@
                 <div class="skill">
                   <p>技能</p>
                   <div class="tag">
-                    <span>JavaScript</span>
-                    <span>JavaScript</span>
+                    <span>Vue</span>
+                    <span>Jquery</span>
+                  </div>
+                  <div class="tag">
+                    <span>HTML</span>
+                    <span>CSS</span>
                     <span>JavaScript</span>
                   </div>
                   <div class="tag">
-                    <span>Vim</span>
+                    <span>MYSQL</span>
                     <span>Git</span>
-                    <span>JavaScript</span>
                   </div>
                   <div class="tag">
-                    <span>Vim</span>
-                    <span>Git</span>
-                    <span>JavaScript</span>
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="tag">
-                    <span>Vim</span>
-                    <span>Git</span>
-                    <span>JavaScript</span>
-                    <span>JavaScript</span>
-                    <span>Java</span>
+                    <span>---</span>
+                    <span>---</span>
+                    <span>---</span>
+                    <span>---</span>
+                    <span>---</span>
                   </div>
                 </div>
                 <div class="footer">
@@ -105,7 +104,6 @@
           </swiper-slide>
         </swiper>
       </transition>
-
     </div>
   </div>
 </template>
@@ -157,7 +155,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 * {
   padding: 0;
   margin: 0;
@@ -180,7 +178,7 @@ ul {
   top: 0px;
   width: 100%;
 }
-.content {
+.index-content {
   overflow: hidden;
   position: absolute;
   height: 100%;
@@ -333,7 +331,7 @@ ul {
       dd {
         margin-top: 30px;
         position: relative;
-        left: -19px;
+        left: -4px;
         .icon {
           display: inline-block;
           width: 27px;
